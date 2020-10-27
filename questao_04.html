@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="sortcut icon" href="./img/javascript.png" type="image/png"/>
+    <title>Atividade 27 - Questão 4</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+        #geral{
+            text-align: center;
+            padding-top: 200px;
+        }
+        input, #res{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Atividade 27 - Questão 4</h1>
+    <div id="geral">
+        <input type="number" id="num1" placeholder="Escolha um número"/>
+        <input type="number" id="num2" placeholder="Escolha um número"/>
+        <br/><br/>
+        <input type="button" value="Somar +" onclick="somar()"/>
+        <input type="button" value="Subtrair -" onclick="subtrair()"/>
+        <input type="button" value="Multiplicar *" onclick="multiplicar()"/>
+        <input type="button" value="Dividir /" onclick="dividir()"/>
+        <br/><br/>
+        <div id="res">Resultado</div>
+    </div>
+    <script>
+        function somar(){
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let resultado = document.getElementById('res');
+            let res = n1 + n2;
+            resultado.innerText = `O resultado é: ${res}`;
+        }
+        function subtrair(){
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let resultado = document.getElementById('res');
+            let res = n1 - n2;
+            resultado.innerText = `O resultado é: ${res}`;
+        }
+        function multiplicar(){
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let resultado = document.getElementById('res');
+            let res = n1 * n2;
+            resultado.innerText = `O resultado é: ${res}`;
+        }
+        function dividir(){
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let resultado = document.getElementById('res');
+            let res = n1 / n2;
+            resultado.innerText = `O resultado é: ${res}`;
+        }
+    </script>
+</body>
+</html>
